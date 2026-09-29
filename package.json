@@ -1,13 +1,18 @@
 {
-  "name": "company-hub",
+  "name": "wifi-attendance",
   "version": "1.0.0",
-  "description": "Internal company app: customers, tasks and team management",
-  "main": "server.js",
+  "description": "WiFi-based attendance management system",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.18" },
   "scripts": {
-    "start": "node server.js",
-    "test": "node --test test/*.test.js"
+    "start": "node src/api/server.ts",
+    "worker": "node src/worker.ts",
+    "migrate": "node src/db/migrate.ts",
+    "seed": "node src/db/seed.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --test-concurrency=1 \"test/*.test.ts\""
   },
-  "engines": { "node": ">=22.13" },
-  "license": "UNLICENSED",
-  "private": true
+  "dependencies": { "pg": "^8.13.0" },
+  "devDependencies": { "@types/node": "^22.10.0", "@types/pg": "^8.11.0", "typescript": "^5.7.0" }
 }
