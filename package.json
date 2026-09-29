@@ -8,6 +8,7 @@
   "scripts": {
     "start": "node src/api/server.ts",
     "worker": "node src/worker.ts",
+    "create-db": "node src/db/create-db.ts",
     "migrate": "node src/db/migrate.ts",
     "seed": "node src/db/seed.ts",
     "typecheck": "tsc --noEmit",
