@@ -33,3 +33,13 @@ GitHub থেকে ZIP ডাউনলোড করে Extract করুন (Br
 - `node` চেনে না → Node.js ইনস্টলের পর নতুন করে Command Prompt/setup.bat চালান।
 - ফোনের MAC: ফোনে "Private/Random WiFi address" চালু থাকলে MAC বদলে যেতে পারে – ঐ WiFi নেটওয়ার্কের জন্য সেটি বন্ধ করুন।
 - ডাটা ব্যাকআপ: PostgreSQL এর `attendance` ডাটাবেস নিয়মিত backup নিন (pgAdmin → Backup)।
+
+---
+## সহজ পথ: এক-ফাইলের ইনস্টলার (.exe)
+`WiFiAttendance-Setup.exe` চালালেই Node.js, PostgreSQL ও অ্যাপ একসাথে ইনস্টল হয়ে যায় — আলাদা কিছু ইনস্টল করতে হয় না।
+- ইনস্টল হয় `%LOCALAPPDATA%\Programs\WiFiAttendance`, ডাটা থাকে `%LOCALAPPDATA%\WiFiAttendance` (আনইনস্টলে ডাটা মোছে না)।
+- Desktop-এর **WiFi Attendance** শর্টকাটে ডাবল-ক্লিক করলে অ্যাপ চালু হয় ও ব্রাউজার খোলে। প্রথমবার লগইন তথ্য (`first-login.txt`) Notepad-এ খুলবে।
+- বন্ধ করতে কালো উইন্ডোটি বন্ধ করুন, বা Start Menu থেকে **Stop WiFi Attendance**।
+- Windows "Unknown publisher" সতর্কতা দিলে **More info → Run anyway** চাপুন (ইনস্টলারটি সাইন করা নয়)।
+- ডাটাবেস চালু না হলে "Microsoft Visual C++ Redistributable 2015-2022 (x64)" ইনস্টল করুন।
+- নিজে বানাতে: `bash installer/build.sh` (Linux/macOS, `nsis` লাগবে)।
