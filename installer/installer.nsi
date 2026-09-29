@@ -41,9 +41,9 @@ Section "Install"
 
   SetOutPath "$INSTDIR\app"
   CreateDirectory "$SMPROGRAMS\WiFi Attendance"
-  CreateShortcut "$SMPROGRAMS\WiFi Attendance\WiFi Attendance.lnk" "$INSTDIR\node\node.exe" '"$INSTDIR\app\src\launcher.ts"' "$INSTDIR\node\node.exe" 0 SW_SHOWMINIMIZED
-  CreateShortcut "$DESKTOP\WiFi Attendance.lnk" "$INSTDIR\node\node.exe" '"$INSTDIR\app\src\launcher.ts"' "$INSTDIR\node\node.exe" 0 SW_SHOWMINIMIZED
-  CreateShortcut "$SMPROGRAMS\WiFi Attendance\Stop WiFi Attendance.lnk" "$INSTDIR\node\node.exe" '"$INSTDIR\app\src\launcher.ts" --stop' "$INSTDIR\node\node.exe" 0 SW_SHOWMINIMIZED
+  CreateShortcut "$SMPROGRAMS\WiFi Attendance\WiFi Attendance.lnk" "$INSTDIR\node\node.exe" '"$INSTDIR\app\src\launcher.ts"' "$INSTDIR\node\node.exe" 0 SW_SHOWNORMAL
+  CreateShortcut "$DESKTOP\WiFi Attendance.lnk" "$INSTDIR\node\node.exe" '"$INSTDIR\app\src\launcher.ts"' "$INSTDIR\node\node.exe" 0 SW_SHOWNORMAL
+  CreateShortcut "$SMPROGRAMS\WiFi Attendance\Stop WiFi Attendance.lnk" "$INSTDIR\node\node.exe" '"$INSTDIR\app\src\launcher.ts" --stop' "$INSTDIR\node\node.exe" 0 SW_SHOWNORMAL
   CreateShortcut "$SMPROGRAMS\WiFi Attendance\Uninstall.lnk" "$INSTDIR\Uninstall.exe"
 
   WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\WiFiAttendance" "DisplayName" "WiFi Attendance"
