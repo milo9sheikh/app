@@ -1,2 +1,2 @@
 Windows installer for WiFi Attendance. Download downloads/WiFiAttendance-Setup.exe
-SHA256: 77e95da756a5c9e47e6369fc8676f5459f7bfb8344d32e6bf24ee8de90c57e01
+SHA256: ba25744de798c40467287c076758d2a48f9b4d3878a4f02bfa5a7229b196e36d
